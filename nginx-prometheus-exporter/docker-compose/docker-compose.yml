@@ -1,0 +1,41 @@
+# version: '2'
+# services:
+#   nginx:
+#     image: nginx
+#     ports:
+#       - "8080:80"
+#     volumes:
+#         - /var/log/nginx
+#     restart: unless-stopped
+#
+#   nginx_exporter:
+#     restart: always
+#     image: ndiazg/nginx-prometheus-exporter:latest
+#     volumes_from:
+#       - nginx
+#     expose:
+#       - "3093"
+#     ports:
+#       - "3093:3093
+
+
+
+version: '2'
+services:
+  prometheus:
+    image: nginx/nginx-prometheus-exporter:0.3.0
+    user: root
+    environment:
+      - SCRAPE_URI=http://nginx/nginx_status
+    ports:
+      - "9113:9113"
+
+
+  nginx:
+    restart: unless-stopped
+    image: nginx:1.16.0-alpine-perl
+    ports:
+      - "8080:80"
+    volumes:
+        - ./conf.d:/etc/nginx/conf.d
+        - ./log:/var/log/nginx
