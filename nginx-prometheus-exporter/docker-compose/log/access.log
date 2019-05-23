@@ -1,2 +1,4 @@
 172.26.0.3 - - [22/May/2019:22:31:46 +0000] "GET /nginx_status HTTP/1.1" 200 97 "-" "Go-http-client/1.1" "-"
 172.27.0.3 - - [22/May/2019:22:34:53 +0000] "GET /nginx_status HTTP/1.1" 200 97 "-" "Go-http-client/1.1" "-"
+172.27.0.1 - - [22/May/2019:22:36:44 +0000] "GET /metrics HTTP/1.1" 200 97 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36" "-"
+172.27.0.3 - - [22/May/2019:22:37:33 +0000] "GET /nginx_status HTTP/1.1" 200 97 "-" "Go-http-client/1.1" "-"

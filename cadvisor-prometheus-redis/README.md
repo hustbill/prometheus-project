@@ -46,6 +46,8 @@ services:
     container_name: redis
     ports:
     - 6379:6379
+```  
+
 ```YAML  
 This configuration instructs Docker Compose to run three services, each of which corresponds to a Docker container:  
 
@@ -70,4 +72,4 @@ docker-compose ps
 You can access the cAdvisor web UI at http://localhost:8080. You can explore stats and graphs for specific Docker containers in our installation at http://localhost:8080/docker/<container>. Metrics for the Redis container, for example, can be accessed at http://localhost:8080/docker/redis, Prometheus at http://localhost:8080/docker/prometheus, and so on.
 
 ## Exploring metrics in the expression browser  
-cAdvisor's web UI is a useful interface for exploring the kinds of things that cAdvisor monitors, but it doesn't provide an interface for exploring container metrics. For that we'll need the Prometheus expression browser, which is available at http://localhost:9090/graph. You can enter Prometheus expressions into the expression bar, which looks like this:(https://prometheus.io/assets/prometheus-expression-bar.png)
+cAdvisor's web UI is a useful interface for exploring the kinds of things that cAdvisor monitors, but it doesn't provide an interface for exploring container metrics. For that we'll need the Prometheus expression browser, which is available at http://localhost:9090/graph. You can enter Prometheus expressions into the expression bar, which looks like this: [Prometheus expression browser](https://prometheus.io/assets/prometheus-expression-bar.png)  
